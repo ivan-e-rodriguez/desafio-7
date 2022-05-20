@@ -1,0 +1,42 @@
+@import '../base/variables';
+@import '../base/maps';
+
+/* main */
+
+main{
+    #background{
+        background-image: $backgroundImg;
+
+        #content{
+            display: grid;
+            @extend %marginContainer;
+            grid-template-columns: 1;
+            grid-template-rows: 2fr 2fr;
+
+
+            #images{
+
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            #texts{
+                background-color: rgba(173, 213, 247, 0.8);
+
+                h1{
+                    @extend %mainTitle;
+                    padding-left: 50px;
+                }
+
+                p{
+                    text-align: map-get($texts, text-align );
+                    font-size: map-get($texts, size );
+                    font-family: map-get($texts, text-font );
+                }
+            }
+        }
+    }
+}

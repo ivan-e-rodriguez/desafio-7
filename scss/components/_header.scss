@@ -1,0 +1,42 @@
+@import '../base/variables';
+
+/* header */
+
+header{
+    display: flex;
+    background: rgb(61, 55, 237);
+    background: linear-gradient(0deg, rgba(61, 55, 237, 1) 0%, rgba(9, 0, 137, 1) 49%);
+    justify-content: space-between;
+    align-items: center;
+
+    a img{
+        width: 180px;
+        height: auto;
+        padding-left: 20px;
+    }
+
+    ul{
+        list-style: none;
+        display: inline;
+        padding-top: 15px ;
+        padding-right: 50px;
+        align-self: normal;
+
+        li{
+            display: inline-block;
+            padding-left: 20px;
+            font-family: $text;   
+        }
+
+        a{
+            text-decoration: none;
+            color: #add5f7;
+            text-shadow: $shadow-default
+        }
+
+        li:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
